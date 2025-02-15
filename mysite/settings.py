@@ -52,12 +52,16 @@ MIDDLEWARE = [
     "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
+# support for whitenoise
 STORAGES = {
     # ...
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
+
+# allowed host
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'libralibra.pythonanywhere.com']
 
 ROOT_URLCONF = 'mysite.urls'
 
